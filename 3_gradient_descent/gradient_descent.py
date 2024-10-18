@@ -4,6 +4,8 @@ import numpy as np
 def gradient_descent(x, y):
     m_current = b_current = 0
     iterations = 10000
+    if len(x) != len(y):
+        raise ValueError("The length of x and y must be the same")
     n = len(x)
     learning_rate = 0.001
 

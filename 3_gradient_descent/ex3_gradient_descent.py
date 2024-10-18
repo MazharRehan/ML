@@ -7,6 +7,8 @@ from sklearn.linear_model import LinearRegression
 def gradient_descent(x, y):
     m_current = b_current = 0
     iterations = 1000000
+    if len(x) != len(y):
+        raise ValueError("The length of x and y must be the same")
     n = len(x)
     learning_rate = 0.0002
     previous_cost = 0
